@@ -5,7 +5,7 @@ import { StatSection, Title, StatList, StatItem, Label, Percentage } from './Sta
 export const Statistics = ({title, stats}) => { 
   return (
     <StatSection>
-      {title ? <Title>{title}</Title>: null}
+      {title && <Title>{title}</Title>}
 
         <StatList>
             {stats.map(item => (
