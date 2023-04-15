@@ -8,8 +8,10 @@ export const FriendList = ({ friends }) => {
       {friends.map(friend => (
         <Item key={friend.id}>
           <FriendListItem item={friend} />
-        </Item>))}
-    </List>);
+        </Item>
+      ))}
+    </List>
+  );
 };
 
 FriendList.propTypes = {

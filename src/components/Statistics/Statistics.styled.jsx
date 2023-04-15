@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-const getRandomHexColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+const getRandomHexColor = () =>
+  `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 
 export const StatSection = styled.section`
   width: 30rem;
@@ -18,7 +19,7 @@ export const Title = styled.h2`
 `;
 
 export const StatList = styled.ul`
-display: flex;
+  display: flex;
 `;
 
 export const StatItem = styled.li`
@@ -28,8 +29,8 @@ export const StatItem = styled.li`
   flex-direction: column;
   gap: 0.625rem;
   padding: 0.625rem 0;
-  background-color:  ${({ colorKey }) => {
-  return getRandomHexColor(colorKey);
+  background-color: ${({ colorKey }) => {
+    return getRandomHexColor(colorKey);
   }};
 `;
 

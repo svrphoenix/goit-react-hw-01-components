@@ -1,5 +1,16 @@
 import PropTypes from 'prop-types';
-import { Avatar, Description, Label, ProfileCard, Quantity, StatItem, StatsList, UserName,Tag, Location } from './Profile.styled';
+import {
+  Avatar,
+  Description,
+  Label,
+  ProfileCard,
+  Quantity,
+  StatItem,
+  StatsList,
+  UserName,
+  Tag,
+  Location,
+} from './Profile.styled';
 
 export const Profile = ({
   avatar,
@@ -11,7 +22,7 @@ export const Profile = ({
   return (
     <ProfileCard>
       <Description>
-        <Avatar src={avatar} alt="User avatar"/>
+        <Avatar src={avatar} alt="User avatar" />
         <UserName>{username}</UserName>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>
@@ -30,7 +41,7 @@ export const Profile = ({
           <Quantity>{likes}</Quantity>
         </StatItem>
       </StatsList>
-      </ProfileCard>
+    </ProfileCard>
   );
 };
 
@@ -39,10 +50,9 @@ Profile.propTypes = PropTypes.shape({
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  stats: PropTypes.shape(
-    {
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }),
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 }).isRequired;
