@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  width: 15rem;
+  width: 15rem;  
   margin: 0 auto;
 `;
 
@@ -13,7 +13,8 @@ export const Item = styled.li`
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 1px 7px 19px -8px rgba(6, 6, 6, 1);
-  &:not(:last-child) {
+  &:not(:last-child){
     margin-bottom: 1.25rem;
   }
 `;
+
